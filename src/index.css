@@ -1,0 +1,80 @@
+html {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #0b090a;
+  color: white;
+  min-height: 100%;
+}
+nav {
+  background-color: #161a1d;
+  border-bottom: 3px solid #c1112f !important;
+}
+
+form {
+  background-color: #161a1d !important;
+  border-bottom: 3px solid #c1112f !important;
+  padding: 20px;
+  margin-top: 60px;
+  border-radius: 2px;
+}
+
+form button,
+form h5 {
+  margin: 20px, 0;
+}
+
+.post-summary {
+  background-color: #161a1d !important;
+  border-bottom: 3px solid #c1112f !important;
+}
+
+.card-action {
+  color: #c1112f;
+}
+.bydetails {
+  color: #c1112f;
+}
+button {
+  background-color: #c1112f;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]),
+input[type="email"]:not(.browser-default):focus:not([readonly]),
+input[type="password"]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-color: #c1112f;
+  box-shadow: none;
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
+textarea.materialize-textarea:focus:not([readonly]) + label,
+input[type="email"]:not(.browser-default):focus:not([readonly]) + label,
+input[type="password"]:not(.browser-default):focus:not([readonly]) + label {
+  color: #c1112f !important;
+}
+/* label color */
+.input-field label {
+  color: #c1112f;
+}
+/* label focus color */
+.input-field input[type="text"]:focus + label {
+  color: #fff;
+}
+/* label underline focus color */
+.input-field input[type="text"]:focus {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 1px 0 0 #fff;
+}
+input {
+  color: white;
+}
+textarea {
+  color: white;
+}
+div {
+  overflow: auto;
+}
