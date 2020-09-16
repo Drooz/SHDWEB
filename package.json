@@ -1,6 +1,7 @@
 {
   "name": "shd",
   "version": "0.1.0",
+  "homepage": "https://shd.zone",
   "private": true,
   "dependencies": {
     "firebase": "^7.19.1",

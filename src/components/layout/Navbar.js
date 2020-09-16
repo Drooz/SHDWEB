@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../resources/img/Logo_SHD.png";
 import SignedInLinks from "./SignedInLinks";
 import SignedOutLinks from "./SignedOutLinks";
+import { connect } from "react-redux";
 
 const Navbar = () => {
   return (
@@ -17,4 +18,8 @@ const Navbar = () => {
     </nav>
   );
 };
-export default Navbar;
+const mapStateToProps = (state) => {
+  console.log(state);
+  return {};
+};
+export default connect(mapStateToProps)(Navbar);
