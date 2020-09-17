@@ -8,7 +8,7 @@ const PostList = ({ posts }) => {
         posts.map((post) => {
           return (
             <Link to={"/post/" + post.id} key={post.id}>
-              <PostSummary post={post} key={post.id} />
+              <PostSummary post={post} />
             </Link>
           );
         })}

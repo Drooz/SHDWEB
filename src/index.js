@@ -15,7 +15,12 @@ import {
 import { ReactReduxFirebaseProvider, getFirebase } from "react-redux-firebase";
 import firebase from "./config/firebaseConfig";
 
-const rrfConfig = { userProfile: "users" }; // react-redux-firebase config
+import "firebase/firestore";
+
+import { useSelector } from "react-redux";
+import { isLoaded } from "react-redux-firebase";
+
+const rrfConfig = {}; // react-redux-firebase config
 
 const store = createStore(
   rootReducer,
@@ -32,10 +37,18 @@ const rrfProps = {
   createFirestoreInstance, // <- needed if using firestore
 };
 
+function AuthIsLoaded({ children }) {
+  const auth = useSelector((state) => state.firebase.auth);
+  if (!isLoaded(auth)) return null; //<div>splash screen...</div>;
+  return children;
+}
+
 ReactDOM.render(
   <Provider store={store}>
     <ReactReduxFirebaseProvider {...rrfProps}>
-      <App />
+      <AuthIsLoaded>
+        <App />
+      </AuthIsLoaded>
     </ReactReduxFirebaseProvider>
   </Provider>,
   document.getElementById("root")
